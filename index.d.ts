@@ -54,6 +54,11 @@ interface LoadStaticResourceFunction {
 export const loadStaticResource : LoadStaticResourceFunction
 
 /**
+ * @brief Dynamically load a resource
+ */
+export function loadResourceDynamic(url : string) : ResourceReturnType
+
+/**
  * @brief Synchronously load the project's package.json
  */
 export function loadProjectPackageJSON() : object
