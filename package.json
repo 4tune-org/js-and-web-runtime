@@ -10,6 +10,7 @@
   },
   "exports": {
     ".": "./dist/runtime.mjs",
+    "./types": "./index.d.ts",
     "./package.json": "./package.json"
   },
   "devDependencies": {
@@ -19,7 +20,8 @@
   },
   "files": [
     "./package.json",
-    "./dist/runtime.mjs"
+    "./dist/runtime.mjs",
+    "./index.d.ts"
   ],
   "scripts": {
     "prepare": "rollup -c ./rollup.config.mjs"
