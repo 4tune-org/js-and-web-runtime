@@ -10,7 +10,7 @@ async function loadResourceAsURL(map, type, path, data) {
 		})
 	}
 
-	const {location} = await createTemporaryResource(data, {
+	const {location} = createTemporaryResource(data, {
 		type: type === "esmodule" ? "text/javascript" : "text/plain"
 	})
 
