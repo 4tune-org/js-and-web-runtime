@@ -28,7 +28,6 @@ interface LoadResourceFunction {
 }
 
 export const loadResource : LoadResourceFunction
-export const loadStaticResource : LoadResourceFunction
 
 /**
  * @brief Dynamically load a resource
