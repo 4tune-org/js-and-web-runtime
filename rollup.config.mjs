@@ -4,7 +4,7 @@ export default {
 	input: "./src/index.mjs",
 
 	output: {
-		file: "./dist/build.mjs",
+		file: "./dist/runtime.mjs",
 		format: "es"
 	},
 
