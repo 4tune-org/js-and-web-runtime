@@ -42,7 +42,7 @@ export function initializeRuntime(
 			if (runtime.resources === null) {
 				throw new Error(
 					`Runtime resources have not been loaded yet.\n` +
-					`In order to load them import {loadResource} from "@4tune-poc/realm-js" and call loadResource(null)` +
+					`In order to load them import {loadResource} from "@4tune/realm-js" and call loadResource(null)` +
 					` to load resources.`
 				)
 			}
