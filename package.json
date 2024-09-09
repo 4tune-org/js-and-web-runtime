@@ -13,6 +13,7 @@
     "./package.json": "./package.json"
   },
   "devDependencies": {
+    "@anio-js-foundation/create-temporary-resource": "^2.0.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "rollup": "^4.21.2"
   },

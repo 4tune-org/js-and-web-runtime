@@ -1,13 +1,22 @@
 import parseResourceURL from "./parseResourceURL.mjs"
+import createTemporaryResource from "@anio-js-foundation/create-temporary-resource"
 
-function loadResourceAsURL(map, path, data) {
-	if (map.has(path)) {
+async function loadResourceAsURL(map, type, path, data) {
+	const full_path = `${type}://${path}`
+
+	if (map.has(full_path)) {
 		return new Promise(resolve => {
-			setTimeout(resolve, 0, map.get(path))
+			setTimeout(resolve, 0, map.get(full_path))
 		})
 	}
 
-	// todo: actually load the resource as URL ...
+	const {location} = await createTemporaryResource(data, {
+		type: type === "esmodule" ? "text/javascript" : "text/plain"
+	})
+
+	map.set(full_path, location)
+
+	return location
 }
 
 export function initializeRuntime(
@@ -50,7 +59,8 @@ export function initializeRuntime(
 
 				return loadResourceAsURL(
 					runtime.resources_url,
-					`${type}://${path}`,
+					type,
+					path,
 					resource.data
 				)
 			}
