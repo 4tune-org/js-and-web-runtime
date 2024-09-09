@@ -3,6 +3,8 @@
  */
 export function getRuntimeVersion() : string
 
+type ResourceReturnType = string | Uint8Array
+
 interface LoadResourceFunction {
 	/**
 	 * @brief Synchronously load a resource
@@ -12,7 +14,7 @@ interface LoadResourceFunction {
 	 * @return
 	 * The resources content.
 	 */
-	(url : string) : string | Uint8Array
+	(url : string) : ResourceReturnType
 
 	/**
 	 * @brief Asynchronously load a resource
