@@ -1,0 +1,26 @@
+{
+  "name": "@4tune-poc/js-and-web-runtime",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Anio Software <info@anio.software>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4tune-poc-org/js-and-web-runtime.git"
+  },
+  "exports": {
+    ".": "./dist/runtime.mjs",
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.21.2"
+  },
+  "files": [
+    "./package.json",
+    "./dist/runtime.mjs"
+  ],
+  "scripts": {
+    "prepare": "rollup -c ./rollup.config.mjs"
+  }
+}
