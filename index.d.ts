@@ -45,3 +45,12 @@ export function loadProjectPackageJSON() : object
 export function loadFortuneConfiguration() : object
 
 export function createDefaultContext() : object
+
+declare const _default: {
+	loadResourceDynamic: typeof loadResourceDynamic,
+	loadProjectPackageJSON: typeof loadProjectPackageJSON,
+	loadFortuneConfiguration: typeof loadFortuneConfiguration,
+	createDefaultContext: typeof createDefaultContext
+}
+
+export default _default
