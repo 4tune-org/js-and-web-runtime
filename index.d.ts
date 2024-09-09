@@ -15,14 +15,14 @@ interface LoadResourceFunction {
 	(url : string) : string | Uint8Array
 
 	/**
-	 * @brief Synchronously load a resource
+	 * @brief Asynchronously load a resource
 	 * @description
-	 * Synchronously load the resource at `url`.
+	 * Asynchronously load the resource at `url`.
 	 * @param url URL of the resource.
 	 * @return
 	 * URL that points to the loaded resource.
 	 */
-	asURL(url : string) : string
+	asURL(url : string) : Promise<string>
 }
 
 export const loadResource : LoadResourceFunction
