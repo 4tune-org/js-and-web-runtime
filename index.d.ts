@@ -17,14 +17,14 @@ interface LoadResourceFunction {
 	(url : string) : ResourceReturnType
 
 	/**
-	 * @brief Asynchronously load a resource
+	 * @brief Synchronously load a resource
 	 * @description
-	 * Asynchronously load the resource at `url`.
+	 * Synchronously load the resource at `url`.
 	 * @param url URL of the resource.
 	 * @return
 	 * URL that points to the loaded resource.
 	 */
-	asURL(url : string) : Promise<string>
+	asURL(url : string) : string
 }
 
 export const loadResource : LoadResourceFunction
@@ -41,14 +41,14 @@ interface LoadStaticResourceFunction {
 	(url : string) : ResourceReturnType
 
 	/**
-	 * @brief Asynchronously load a resource
+	 * @brief Synchronously load a resource
 	 * @description
-	 * Asynchronously load the resource at `url`.
+	 * Synchronously load the resource at `url`.
 	 * @param url URL of the resource.
 	 * @return
 	 * URL that points to the loaded resource.
 	 */
-	asURL(url : string) : Promise<string>
+	asURL(url : string) : string
 }
 
 export const loadStaticResource : LoadStaticResourceFunction
