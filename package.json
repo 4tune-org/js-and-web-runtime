@@ -22,6 +22,7 @@
   "files": [
     "./package.json",
     "./dist/runtime.mjs",
+    "./src/createRuntimeGlueCode.mjs",
     "./index.d.ts"
   ],
   "scripts": {
