@@ -11,6 +11,7 @@
   "exports": {
     ".": "./dist/runtime.mjs",
     "./types": "./index.d.ts",
+    "./createRuntimeGlueCode": "./src/createRuntimeGlueCode.mjs",
     "./package.json": "./package.json"
   },
   "devDependencies": {
